@@ -1,4 +1,6 @@
-{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
+{{- $src := .Destination | safeURL -}}
+{{- $image := or (.Page.Resources.GetMatch $src) (resources.GetMatch $src) -}}
+
 {{- $Permalink := .Destination | relURL | safeURL -}}
 {{- $alt := .PlainText | safeHTML -}}
 {{- $Width := 0 -}}
