@@ -1,4 +1,9 @@
 {{- $src := .Get "src" | default (.Get 0) -}}
+{{- $video := or (.Page.Resources.GetMatch $src) (resources.GetMatch $src) -}}
+{{ if $video }}
+    {{ $src = $video.RelPermalink }}
+{{ end }}
+
 <div class="video-wrapper">
     <video
     controls
