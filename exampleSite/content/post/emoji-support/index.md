@@ -37,7 +37,7 @@ The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference
 <style>
 .emojify {
 	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-	font-size: 2rem;
+	font-size: 1.25rem;
 	vertical-align: middle;
 }
 @media screen and (max-width:650px) {

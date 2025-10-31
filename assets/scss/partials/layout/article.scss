@@ -56,7 +56,7 @@
                 text-transform: uppercase;
                 display: flex;
                 align-items: center;
-                font-size: 1.4rem;
+                font-size: 0.875rem;
                 gap: 15px;
 
                 svg {
@@ -189,7 +189,7 @@
         height: 150px;
 
         .article-title {
-            font-size: 1.8rem;
+            font-size: 1.125rem;
             margin: 0;
         }
 
@@ -249,7 +249,7 @@
         text-align: center;
 
         figcaption {
-            font-size: 1.4rem;
+            font-size: 0.875rem;
             color: var(--card-text-color-secondary);
         }
     }
