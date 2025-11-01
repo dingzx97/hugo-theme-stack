@@ -2,11 +2,10 @@
 {{- $secret := .Get "secret" | default (.Get 1) -}}
 
 {{- $video := or (.Page.Resources.GetMatch $src) (resources.GetMatch $src) -}}
-{{ if $video }}
+{{ if and $video (or hugo.IsDevelopment (not $secret)) }}
     {{ $src = $video.RelPermalink }}
 {{ end }}
 
-{{ if not $secret }}
 <div class="video-wrapper">
     <video
     controls
@@ -20,4 +19,3 @@
         </p>
     </video>
 </div>
-{{ end }}
